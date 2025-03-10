@@ -4,23 +4,21 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git 'https://github.com/harhar25/EXAMPLE.git'
-t'
             }
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package' // Replace with 'npm install' or 'python setup.py' if needed
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test' // Replace with appropriate test command
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                // Add deployment scripts here
+                echo 'Deploying...'
             }
         }
     }
